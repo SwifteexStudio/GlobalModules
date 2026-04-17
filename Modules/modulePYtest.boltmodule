@@ -1,5 +1,130 @@
 [BV=200, CORE=0, VER: 2.10]
 
 public.module[modulePYtest$1$python] {{
+"""
+simple_math_tool.py
 
+A lightweight, importable math utility module.
+Focused on basic (amateur) math with placeholders for expansion.
+"""
+
+import math
+
+
+class SimpleMath:
+    def __init__(self):
+        pass
+
+    # =========================
+    # TRIGONOMETRY
+    # =========================
+
+    def sin(self, x, degrees=False):
+        """
+        Compute sine of x
+        """
+        if degrees:
+            x = math.radians(x)
+        return math.sin(x)
+
+    def cos(self, x, degrees=False):
+        """
+        Compute cosine of x
+        """
+        if degrees:
+            x = math.radians(x)
+        return math.cos(x)
+
+    def tan(self, x, degrees=False):
+        """
+        Compute tangent of x
+        """
+        if degrees:
+            x = math.radians(x)
+        return math.tan(x)
+
+    # =========================
+    # BASIC OPERATIONS
+    # =========================
+
+    def add(self, a, b):
+        return a + b
+
+    def subtract(self, a, b):
+        return a - b
+
+    def multiply(self, a, b):
+        return a * b
+
+    def divide(self, a, b):
+        if b == 0:
+            return None  # placeholder handling
+        return a / b
+
+    # =========================
+    # POWER & ROOT
+    # =========================
+
+    def power(self, base, exponent):
+        return math.pow(base, exponent)
+
+    def sqrt(self, x):
+        return math.sqrt(x)
+
+    # =========================
+    # PLACEHOLDER ADVANCED (FOR FUTURE)
+    # =========================
+
+    def log(self, x, base=10):
+        """
+        Placeholder: logarithm
+        """
+        # TODO: expand handling
+        return math.log(x, base)
+
+    def factorial(self, n):
+        """
+        Placeholder: factorial
+        """
+        # TODO: add validation
+        return math.factorial(n)
+
+    def custom_operation(self, *args):
+        """
+        Placeholder: user-defined math operation
+        """
+        # TODO: implement custom logic
+        return None
+
+    # =========================
+    # FORMAT / UTIL
+    # =========================
+
+    def round(self, x, digits=2):
+        return round(x, digits)
+
+    def absolute(self, x):
+        return abs(x)
+
+
+# =========================
+# QUICK ACCESS (OPTIONAL)
+# =========================
+
+# Allows direct import like: from simple_math_tool import sin
+_engine = SimpleMath()
+
+sin = _engine.sin
+cos = _engine.cos
+tan = _engine.tan
+add = _engine.add
+subtract = _engine.subtract
+multiply = _engine.multiply
+divide = _engine.divide
+power = _engine.power
+sqrt = _engine.sqrt
+log = _engine.log
+factorial = _engine.factorial
+round_num = _engine.round
+abs_val = _engine.absolute
 }}
