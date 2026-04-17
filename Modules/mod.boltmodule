@@ -1,0 +1,7 @@
+public.module[mod$1] {{
+
+  fn main()
+    sys.out'hi from BMM'
+  end
+
+}}
