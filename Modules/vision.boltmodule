@@ -1,5 +1,5 @@
 [BV=200, CORE=0, VER: 1.0, LANG=python]
-public.module[modulePYtest$1$Python] {{
+public.module[vision$1$Python] {{
 def goal():
     goalt = (
         "My goal for Bolt is to build a high-performance, scalable, and innovative "
