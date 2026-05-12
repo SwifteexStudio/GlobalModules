@@ -1,0 +1,95 @@
+[BV=200, CORE=0, VER: 1.0, LANG=python]
+public.module[random$1$Python] {{
+import random as _r
+
+# =========================
+# Core functions
+# =========================
+
+def seed(a=None):
+    return _r.seed(a)
+
+def random():
+    return _r.random()
+
+def getstate():
+    return _r.getstate()
+
+def setstate(state):
+    return _r.setstate(state)
+
+def getrandbits(k):
+    return _r.getrandbits(k)
+
+# =========================
+# Integer functions
+# =========================
+
+def randint(a, b):
+    return _r.randint(a, b)
+
+def randrange(start, stop=None, step=1):
+    return _r.randrange(start, stop, step)
+
+# =========================
+# Sequence functions
+# =========================
+
+def choice(seq):
+    return _r.choice(seq)
+
+def choices(population, weights=None, cum_weights=None, k=1):
+    return _r.choices(population, weights=weights, cum_weights=cum_weights, k=k)
+
+def shuffle(x):
+    _r.shuffle(x)
+    return x
+
+def sample(population, k):
+    return _r.sample(population, k)
+
+# =========================
+# Float distributions
+# =========================
+
+def uniform(a, b):
+    return _r.uniform(a, b)
+
+def triangular(low, high, mode):
+    return _r.triangular(low, high, mode)
+
+def betavariate(alpha, beta):
+    return _r.betavariate(alpha, beta)
+
+def expovariate(lambd):
+    return _r.expovariate(lambd)
+
+def gammavariate(alpha, beta):
+    return _r.gammavariate(alpha, beta)
+
+def gauss(mu, sigma):
+    return _r.gauss(mu, sigma)
+
+def lognormvariate(mu, sigma):
+    return _r.lognormvariate(mu, sigma)
+
+def normalvariate(mu, sigma):
+    return _r.normalvariate(mu, sigma)
+
+def vonmisesvariate(mu, kappa):
+    return _r.vonmisesvariate(mu, kappa)
+
+def paretovariate(alpha):
+    return _r.paretovariate(alpha)
+
+def weibullvariate(alpha, beta):
+    return _r.weibullvariate(alpha, beta)
+
+# =========================
+# Optional: expose original module
+# =========================
+
+def raw():
+    """Access original random module if needed."""
+    return _r
+}}
